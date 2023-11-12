@@ -1,0 +1,182 @@
+:root {
+  --background: #e5e5e5;
+  --foreground: #000000;
+  --hover: #ff9800;
+  --primary: #ff9800;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  color: var(--foreground);
+  background-color: var(--background);
+  letter-spacing: 2px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--foreground) !important;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul {
+  padding: 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  padding: 1rem 2rem;
+  margin: 0 auto;
+  position: relative;
+  border-bottom: 1px solid var(--foreground);
+}
+
+.brand {
+  font-size: 2rem;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: var(--background);
+}
+
+.nav-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger,
+#checkbox-toggle {
+  display: none;
+  color: var(--foreground);
+}
+
+.nav-item {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-link {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: var(--hover);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--hover) !important;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+#about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 2rem;
+}
+
+.about__heading {
+  font-size: 5rem;
+}
+.about__desc-container{
+  display: inline-block;
+}
+.about__desc{
+  font-size: 2rem;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid orange;
+  width: 0;
+  animation: typing 2s steps(40, end) alternate infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 105%;
+  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000000;
+    --foreground: #e5e5e5;
+  }
+}
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 900px) {
+  .hamburger {
+    display: block;
+    font-size: 2rem;
+  }
+
+  .nav-menu {
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
+    left: -200%;
+    top: 100%;
+    z-index: 99;
+    border-bottom: 1px solid #c1c3c5;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .nav-link {
+    display: block;
+    margin: 0;
+  }
+
+  .nav-item {
+    padding: 0.5rem 0;
+  }
+
+  input[type="checkbox"]:checked~.nav-menu {
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 580px) {}
+
+@media screen and (max-width: 480px) {}
