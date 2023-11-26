@@ -20,13 +20,16 @@
 <body>
   <header>
     <section class="header-container">
-      <div class="logo-div">
-        <a class="brand" href="#">Portfolio</a>
+      <div class="brand-div">
+        <div class="logo-div">
+          <a class="brand" href="/">&lt;&sol;&gt;</a>
+        </div>
+        <input type="checkbox" id="theme-mobile">
       </div>
       <input type="checkbox" id="checkbox-toggle">
       <label for="checkbox-toggle" class="hamburger">&#9776;</label>
       <ul class="nav-menu">
-        <li class="nav-item"><a class="nav-link" id="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" id="#hero">About</a></li>
         <li class="nav-item"><a class="nav-link" id="#experience">Experience</a></li>
         <li class="nav-item"><a class="nav-link" id="#project">Projects</a></li>
         <li class="nav-item"><a class="nav-link" id="#skill">Skills</a></li>
@@ -37,26 +40,78 @@
     </section>
   </header>
   <main>
-    <section class="about-container">
-      <section id="about">
-        <h1 class="about__heading">Jabra Ram</h1>
-        <div class="about__desc-container">
-          <p class="about__desc">Software Engineer</p>
-          <p class="about__desc">Front-End Developer</p>
-          <p class="about__desc">Competitive Programmer</p>
-        </div>
-        <div class="socials">
-          <a href="https://github.com/mr-ram99" class="social-icon">git</a>
-          <a href="https://www.linkedin.com/in/jabra-ram99" class="social-icon">lnkd</a>
-          <a href="https://twitter.com" class="social-icon">twt</a>
-          <a href="mailto:jrchoudhary2410@gmail.com" class="social-icon">gml</a>
-          <a href="https://www.instagram.com/hack4one/" class="social-icon">ins</a>
-        </div>
-        <div class="resume">
-          <a href="#">Resume</a>
-        </div>
+    <section class="wrapper">
+      <section id="hero" class="containerize">
+        <section class="about-hero">
+          <h1 class="hero__heading">Jabra Ram</h1>
+          <div class="hero__desc-container">
+            <p class="hero__desc">Software Engineer</p>
+            <p class="hero__desc">Front-End Developer</p>
+            <p class="hero__desc">Competitive Programmer</p>
+          </div>
+          <div class="socials">
+            <a href="https://github.com/mr-ram99" class="social-icon" target="_blank">
+              <i class="fa-brands fa-github" style="color: var(--foreground);"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/jabra-ram99" class="social-icon" target="_blank">
+              <i class="fa-brands fa-linkedin" style="color: var(--foreground);"></i>
+            </a>
+            <a href="https://twitter.com" class="social-icon" target="_blank">
+              <i class="fa-brands fa-x-twitter" style="color: var(--foreground);"></i>
+            </a>
+            <a href="mailto:jrchoudhary2410@gmail.com" class="social-icon" target="_blank">
+              <i class="fa-brands fa-google" style="color: var(--foreground);"></i>
+            </a>
+            <a href="https://www.instagram.com/hack4one/" class="social-icon" target="_blank">
+              <i class="fa-brands fa-instagram" style="color: var(--foreground);"></i>
+            </a>
+          </div>
+          <div class="resume">
+            <a href="https://drive.google.com/file/d/1rPFEoAP_qYMeokREld_Z3wbcfkHi-Wpe/view?usp=sharing"
+              target="_blank">
+              Resume
+              <i class="fa-solid fa-arrow-up-right-from-square" style="color: var(--foreground);"></i>
+            </a>
+          </div>
+        </section>
+        <section class="hero_img_section">
+          <img src="./assets/hero_svg.svg" class="hero__img" alt="HERO_SVG">
+        </section>
       </section>
     </section>
+    <div class="wrapper">
+      <section id="experience" class="containerize">
+        <h2>Experience</h2>
+        <div class="timeline">
+          <div class="exp_content left_content">
+            <img src="./assets/kreeti_logo.png" alt="kreeti">
+            <div class="text-box">
+              <h3>Kreeti Technologies</h3>
+              <small>Feb 2023 - Present</small>
+              <p>
+                Working on recording meeting in application using NodeJs, Web
+                Audio API and framework FFmpeg for handling video, audio, and other
+                multimedia files and streams in application.
+              </p>
+              <span class="left_content_arr"></span>
+            </div>
+          </div>
+          <div class="exp_content right_content">
+            <img src="./assets/tle_logo.png" alt="tle">
+            <div class="text-box">
+              <h3>TLE ELiminators</h3>
+              <small>Dec 2022 - July 2023</small>
+              <p>
+                Demonstrated ability to explain complex concepts to students in a
+                clear and concise manner and solved 2000+ doubts of students related to any coding
+                problem/concept.
+              </p>
+              <span class="right_content_arr"></span>
+            </div>
+          </div>
+        </div>
+    </div>
+    </div>
   </main>
   <script src="index.js"></script>
 </body>

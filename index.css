@@ -41,8 +41,17 @@ ul {
   border-bottom: 1px solid var(--foreground);
 }
 
+.brand-div {
+  display: flex;
+  gap: 2rem;
+}
+
 .brand {
   font-size: 2rem;
+}
+
+#theme-mobile {
+  display: none;
 }
 
 .nav-menu {
@@ -98,24 +107,46 @@ ul {
   width: 100%;
 }
 
-#about {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.containerize {
   max-width: 1200px;
   margin: auto;
   padding: 1rem 2rem;
 }
 
-.about__heading {
-  font-size: 5rem;
+#hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 3rem auto;
 }
-.about__desc-container{
+
+.about-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+}
+
+.hero_img_section {
+  width: 60%;
+}
+
+.hero__img {
+  width: 100%;
+}
+
+.hero__heading {
+  font-size: clamp(1rem, 5rem, 5vw);
+}
+
+.hero__desc-container {
   display: inline-block;
 }
-.about__desc{
-  font-size: 2rem;
+
+.hero__desc {
+  font-size: clamp(1rem, 2rem, 3vw);
   overflow: hidden;
   white-space: nowrap;
   border-right: 2px solid orange;
@@ -133,6 +164,120 @@ ul {
   }
 }
 
+.socials {
+  display: flex;
+  gap: 2rem;
+}
+
+.social-icon {
+  font-size: 2rem;
+}
+
+.resume {
+  margin-top: 1rem;
+}
+
+.fa-linkedin:hover {
+  color: #0a66c2 !important;
+}
+
+.fa-x-twitter:hover {
+  color: #2c1d1d !important;
+}
+
+.fa-instagram:hover {
+  color: #ff0169 !important;
+}
+
+.fa-google:hover {
+  color: #0a66c2 !important;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.exp_content {
+  position: relative;
+  padding: 1rem 2rem;
+  width: 50%;
+}
+
+.text-box {
+  position: relative;
+  background-color: var(--foreground);
+  color: var(--background);
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.left_content {
+  left: 0;
+}
+
+.right_content {
+  left: 50%;
+}
+
+.exp_content img {
+  position: absolute;
+  width: 3rem;
+  border-radius: 50%;
+  right: -1.5rem;
+  top: 2rem;
+  z-index: 2;
+}
+
+.right_content img {
+  left: -1.5rem;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 0.5rem;
+  height: 100%;
+  background-color: var(--foreground);
+  z-index: 1;
+}
+
+.text-box h3 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.text-box small {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.left_content_arr {
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: 2rem;
+  border-top: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid transparent;
+  border-left: 0.5rem solid var(--foreground);
+  right: -0.5rem;
+  z-index: 2;
+}
+
+.right_content_arr {
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: 2rem;
+  border-top: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid transparent;
+  border-right: 0.5rem solid var(--foreground);
+  left: -0.5rem;
+  z-index: 2;
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -141,7 +286,11 @@ ul {
   }
 }
 
-@media screen and (max-width: 1024px) {}
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+}
 
 @media screen and (max-width: 900px) {
   .hamburger {
@@ -163,6 +312,14 @@ ul {
     transition: all 0.5s ease-in-out;
   }
 
+  #theme-mobile {
+    display: block;
+  }
+
+  #theme {
+    display: none;
+  }
+
   .nav-link {
     display: block;
     margin: 0;
@@ -177,6 +334,62 @@ ul {
   }
 }
 
-@media screen and (max-width: 580px) {}
+@media screen and (max-width: 768px) {
+  #hero {
+    flex-direction: column;
+    margin: 1rem auto;
+    gap: 3rem;
+  }
+
+  .about-hero {
+    width: 100%;
+  }
+
+  .hero_img_section {
+    width: 100%;
+  }
+
+  .hero__heading {
+    font-size: clamp(3rem, 5rem, 15vw);
+  }
+
+  .hero__desc {
+    font-size: clamp(1rem, 2rem, 6vw);
+  }
+
+  .social-icon {
+    font-size: clamp(1rem, 2rem, 6vw);
+  }
+}
+
+@media screen and (max-width: 580px) {
+  html {
+    font-size: 10px;
+  }
+
+  .timeline::after {
+    left: 2rem;
+  }
+
+  .exp_content {
+    width: 100%;
+    padding-left: 4rem;
+  }
+
+  .right_content {
+    left: 0;
+  }
+
+  .left_content img,
+  .right_content img {
+    left: 0.6rem;
+  }
+
+  .left_content_arr {
+    border-left: 0;
+    border-right: 0.5rem solid var(--foreground);
+    left: -0.5rem;
+  }
+}
 
 @media screen and (max-width: 480px) {}
