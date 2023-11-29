@@ -43,6 +43,8 @@ ul {
 
 .brand-div {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
 }
 
@@ -50,8 +52,47 @@ ul {
   font-size: 2rem;
 }
 
-#theme-mobile {
-  display: none;
+.toggle-container {
+  position: relative;
+  width: 50px;
+  height: 25px;
+  background-color: #000000;
+  border-radius: 15px;
+  border: 1px solid var(--foreground);
+  cursor: pointer;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 23px;
+  background-color: #e5e5e5;
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+}
+
+.toggle-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 17px;
+  height: 17px;
+  fill: #000000;
+  transition: fill 0.5s ease;
+}
+
+.moon-icon {
+  left: 4px;
+}
+
+.sun-icon {
+  right: 4px;
+}
+
+.dark-mode .toggle-button {
+  transform: translate(23px);
 }
 
 .nav-menu {
@@ -250,6 +291,10 @@ ul {
   font-weight: 600;
 }
 
+.text-box h6 {
+  margin: 0;
+}
+
 .text-box small {
   display: inline-block;
   margin-bottom: 1rem;
@@ -279,13 +324,6 @@ ul {
   z-index: 2;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #000000;
-    --foreground: #e5e5e5;
-  }
-}
-
 @media screen and (max-width: 1024px) {
   html {
     font-size: 16px;
@@ -310,14 +348,6 @@ ul {
     z-index: 99;
     border-bottom: 1px solid #c1c3c5;
     transition: all 0.5s ease-in-out;
-  }
-
-  #theme-mobile {
-    display: block;
-  }
-
-  #theme {
-    display: none;
   }
 
   .nav-link {
