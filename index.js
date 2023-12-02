@@ -1,5 +1,6 @@
 const body = document.body;
 document.addEventListener('DOMContentLoaded', () => {
+  // light-dark mode
   const descriptions = document.querySelectorAll('.hero__desc');
 
   function showDescription(index) {
@@ -32,3 +33,20 @@ function toggleDarkMode() {
     document.documentElement.style.setProperty('--foreground', '#000000');
   }
 }
+
+  // fade-in scroll effect
+  document.addEventListener("scroll", function() {
+    var pageTop = document.documentElement.scrollTop;
+    var pageBottom = pageTop + window.innerHeight;
+    var tags = document.querySelectorAll(".fade-in");
+  
+    tags.forEach(function(tag) {
+      if (tag.getBoundingClientRect().top+30 < pageBottom) {
+        tag.classList.add("visible");
+      } else {
+        tag.classList.remove("visible");
+      }
+    });
+  });
+  
+  

@@ -3,6 +3,7 @@
   --foreground: #000000;
   --hover: #ff9800;
   --primary: #ff9800;
+  --secondary: #555555;
 }
 
 * {
@@ -24,6 +25,17 @@ a {
 
 li {
   list-style-type: none;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translate(0, 50vh);
+  transition: all 1s;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translate(0, 0);
 }
 
 ul {
@@ -324,6 +336,65 @@ ul {
   z-index: 2;
 }
 
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  padding: 1rem;
+}
+
+.project {
+  flex: 1 1 300px;
+}
+
+.card {
+  border-radius: 10px;
+}
+
+.card-img-top {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card-title {
+  color: #000000;
+}
+
+.custom-btn {
+  font-size: 0.8rem;
+  margin: 4px;
+  padding: 0.5rem;
+  background-color: var(--background);
+  color: var(--foreground) !important;
+}
+
+.link-btn {
+  background-color: var(--foreground);
+  color: var(--background) !important;
+}
+
+.skills-inner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 1rem;
+}
+.skill{
+  width: 100px;
+}
+.skill img{
+  width: 100%;
+}
 @media screen and (max-width: 1024px) {
   html {
     font-size: 16px;
