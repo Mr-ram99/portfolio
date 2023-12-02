@@ -381,7 +381,7 @@ ul {
   color: var(--background) !important;
 }
 
-.skills-inner{
+.skills-inner {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -389,11 +389,43 @@ ul {
   gap: 40px;
   padding: 1rem;
 }
-.skill{
-  width: 100px;
+
+.skill {
+  width: 80px;
 }
-.skill img{
+
+.skill img {
   width: 100%;
+}
+
+.coding-profiles {
+  padding: 1rem;
+}
+
+.coding-profile-item {
+  margin: 1rem 0;
+}
+
+.coding-profile-img {
+  width: 15px;
+}
+
+#contact .socials {
+  padding: 1rem;
+  justify-content: center;
+  gap: 3rem;
+}
+
+footer{
+  background-color: var(--foreground);
+}
+.copyright{
+  font-size: small;
+  text-align: center;
+  color: var(--background);
+}
+.copyright a{
+  color: var(--background) !important;
 }
 @media screen and (max-width: 1024px) {
   html {
@@ -461,11 +493,15 @@ ul {
   .social-icon {
     font-size: clamp(1rem, 2rem, 6vw);
   }
+
+  .skill {
+    width: 50px;
+  }
 }
 
 @media screen and (max-width: 580px) {
   html {
-    font-size: 10px;
+    font-size: 14px;
   }
 
   .timeline::after {
@@ -490,6 +526,10 @@ ul {
     border-left: 0;
     border-right: 0.5rem solid var(--foreground);
     left: -0.5rem;
+  }
+
+  .section-heading {
+    font-size: 2rem;
   }
 }
 
