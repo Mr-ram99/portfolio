@@ -27,10 +27,17 @@ li {
   list-style-type: none;
 }
 
-.fade-in {
+.fade-in{
   opacity: 0;
-  transform: translate(0, 50vh);
-  transition: all 1s;
+}
+
+.fade-in-odd{
+  transform: translate(100%, 0);
+  transition: all 2s;
+}
+.fade-in-even{
+  transform: translate(-100%, 0);
+  transition: all 2s;
 }
 
 .fade-in.visible {
