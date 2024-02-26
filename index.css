@@ -27,7 +27,7 @@ li {
   list-style-type: none;
 }
 
-.fade-in{
+/* .fade-in{
   opacity: 0;
 }
 
@@ -43,7 +43,7 @@ li {
 .fade-in.visible {
   opacity: 1;
   transform: translate(0, 0);
-}
+} */
 
 ul {
   padding: 0;

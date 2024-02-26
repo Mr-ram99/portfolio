@@ -3,11 +3,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // light-dark mode
   const descriptions = document.querySelectorAll('.hero__desc');
   const tags = document.querySelectorAll(".fade-in");
-  for(let i=0;i<tags.length;i++){
-    if(i%2==0){
+  for (let i = 0; i < tags.length; i++) {
+    if (i % 2 == 0) {
       tags[i].classList.add("fade-in-even");
     }
-    else{
+    else {
       tags[i].classList.add("fade-in-odd");
     }
   }
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     index = (index + 1) % descriptions.length;
     showDescription(index);
   }, 4000);
-  
+
 })
 
 function toggleDarkMode() {
@@ -43,18 +43,16 @@ function toggleDarkMode() {
 }
 
 // fade-in scroll effect
-document.addEventListener("scroll", function() {
-  var pageTop = document.documentElement.scrollTop;
-  var pageBottom = pageTop + window.innerHeight;
-  var tags = document.querySelectorAll(".fade-in");
+// document.addEventListener("scroll", function() {
+//   var pageTop = document.documentElement.scrollTop;
+//   var pageBottom = pageTop + window.innerHeight;
+//   var tags = document.querySelectorAll(".fade-in");
 
-  tags.forEach(function(tag) {
-    if (tag.getBoundingClientRect().top+20 < pageBottom) {
-      tag.classList.add("visible");
-    } else {
-      tag.classList.remove("visible");
-    }
-  });
-});
-  
-  
+//   tags.forEach(function(tag) {
+//     if (tag.getBoundingClientRect().top+20 < pageBottom) {
+//       tag.classList.add("visible");
+//     } else {
+//       tag.classList.remove("visible");
+//     }
+//   });
+// });
