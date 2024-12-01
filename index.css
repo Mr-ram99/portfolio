@@ -1,5 +1,5 @@
 :root {
-  --background: #e5e5e5;
+  --background: #f2f5ff;
   --foreground: #000000;
   --hover: #ff9800;
   --primary: #ff9800;
@@ -235,6 +235,14 @@ ul {
 
 .resume {
   margin-top: 1rem;
+  background-color: #b68ae9;
+  color : white;
+  padding: 6px;
+  border-radius: 4px;
+}
+
+.resume:hover{
+  background-color: #934be4;
 }
 
 .fa-linkedin:hover {
@@ -424,12 +432,13 @@ ul {
 }
 
 footer{
-  background-color: var(--foreground);
+  background-color: var(--background);
+  border-top: 1px solid var(--foreground);
 }
 .copyright{
   font-size: small;
   text-align: center;
-  color: var(--background);
+  color: var(--foreground);
 }
 .copyright a{
   color: var(--background) !important;
